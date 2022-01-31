@@ -1,0 +1,245 @@
+* {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: bottom;
+  gap: 0.8rem;
+  background-color: #c5e4e7;
+}
+@media (min-width: 900px) {
+  body {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+body img {
+  max-width: 4rem;
+  padding: 0.8rem;
+}
+
+.container {
+  background-color: white;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  gap: 0.8rem;
+}
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    flex-flow: row;
+    max-width: 50rem;
+    border-radius: 2rem;
+  }
+}
+
+.selector {
+  display: flex;
+  flex-flow: column;
+  gap: 0.8rem;
+}
+
+.bill {
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+}
+.bill h1 {
+  color: #5e7a7d;
+}
+.bill input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #f4fafa;
+  background-origin: content-box;
+  text-align: right;
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+  cursor: pointer;
+}
+.bill input::placeholder {
+  color: #00494d;
+}
+.bill input:hover {
+  border: solid #26c0ab;
+}
+
+.error-hide {
+  overflow: hidden;
+  max-height: 0;
+  animation: close 0.5s ease;
+  padding-left: 2vh;
+  padding-right: 1vh;
+}
+
+.error-show {
+  overflow: hidden;
+  animation: open 0.5s ease;
+  margin-bottom: 0.5rem;
+  padding-left: 2vh;
+  padding-right: 1vh;
+}
+
+.tip {
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+}
+.tip h1 {
+  color: #5e7a7d;
+}
+.tip .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.tip .button-container button {
+  width: 9rem;
+  background-color: #00494d;
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tip .button-container button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+.tip .button-container input {
+  width: 8.4rem;
+  background-color: #f4fafa;
+  text-align: right;
+  border-radius: 0.3rem;
+  padding: 0 0.3rem;
+  border: none;
+}
+.tip .button-container input::placeholder {
+  color: #00494d;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.people {
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+}
+.people h1 {
+  color: #5e7a7d;
+}
+.people input {
+  background-image: url(../images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #f4fafa;
+  background-origin: content-box;
+  text-align: right;
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+}
+.people input::placeholder {
+  color: #00494d;
+}
+.people input:hover {
+  border: solid #26c0ab;
+}
+
+.review {
+  display: flex;
+  flex-flow: column;
+  gap: 0.8rem;
+  justify-content: space-between;
+  background-color: #00494d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 900px) {
+  .review {
+    padding: 2rem;
+  }
+}
+.review button {
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  color: #00494d;
+  border-radius: 0.3rem;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.review button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+@media (min-width: 900px) {
+  .review button {
+    min-width: 16rem;
+  }
+}
+
+.results {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.amount-person {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.total-person {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-flow: column;
+}
+.text h1 {
+  color: white;
+}
+.text h2 {
+  color: #7f9c9f;
+}
+
+.money {
+  display: flex;
+  align-items: center;
+  color: #26c0ab;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+footer {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

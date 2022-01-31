@@ -1,0 +1,186 @@
+@use 'variables'
+
+@use 'mixins'
+
+*
+    font-family: 'Space Mono', monospace
+    font-size:16px
+    margin: 0 0
+    padding: 0 0
+body
+    height: 100vh
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: bottom
+    gap: variables.$gap-logo-container
+    background-color: variables.$light-grayish-cyan
+    @include mixins.desktop
+        justify-content: center
+        gap: variables.$gap-logo-container-desktop
+    img
+        max-width: 4rem
+        padding: variables.$padding-logo
+.container
+    background-color: variables.$white
+    border-radius: 2rem 2rem 0 0
+    padding: 2rem
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-selector-review
+    @include mixins.desktop
+        display: flex
+        flex-flow: row
+        max-width: 50rem
+        border-radius: 2rem
+.selector
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-bill-select-number
+.bill
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-h1
+    h1
+        color: variables.$dark-grayish-cyan
+    input
+        background-image: url(../images/icon-dollar.svg)
+        background-repeat: no-repeat
+        background-position: left
+        background-color: variables.$light-grayish-cyan-2
+        background-origin: content-box
+        text-align: right
+        padding: .3rem 1rem
+        border-radius: .3rem
+        border: none
+        font-size: 24px
+        font-weight: 700
+        color: variables.$very-dark-cyan
+        cursor: pointer
+        &::placeholder
+            color: variables.$very-dark-cyan
+        &:hover
+            border: solid variables.$strong-cyan
+.error-hide
+    overflow: hidden
+    max-height: 0
+    animation: close .5s ease
+    padding-left: 2vh
+    padding-right: 1vh
+.error-show
+    overflow: hidden
+    animation: open .5s ease
+    margin-bottom: 0.5rem
+    padding-left: 2vh
+    padding-right: 1vh
+.tip
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-h1
+    h1
+        color: variables.$dark-grayish-cyan
+    .button-container
+        display: flex
+        flex-wrap: wrap
+        gap: variables.$gap-buttons
+        justify-content: space-between
+        button
+            width: 9rem
+            background-color: variables.$very-dark-cyan
+            color: variables.$white
+            border-radius: .3rem
+            border: none
+            font-size: 24px
+            font-weight: 700
+            cursor: pointer
+            &:hover
+                background-color: variables.$light-grayish-cyan
+                color: variables.$very-dark-cyan
+        input
+            width:8.4rem
+            background-color: variables.$light-grayish-cyan-2
+            text-align: right
+            border-radius: .3rem
+            padding: 0 .3rem
+            border: none
+            &::placeholder
+                color: variables.$very-dark-cyan
+                font-size: 24px
+                font-weight: 700
+.people
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-h1
+    h1
+        color: variables.$dark-grayish-cyan
+    input
+        background-image: url(../images/icon-person.svg)
+        background-repeat: no-repeat
+        background-position: left
+        background-color: variables.$light-grayish-cyan-2
+        background-origin: content-box
+        text-align: right
+        padding: .3rem 1rem
+        border-radius: .3rem
+        border: none
+        cursor: pointer
+        font-size: 24px
+        font-weight: 700
+        &::placeholder
+            color: variables.$very-dark-cyan 
+        &:hover
+            border: solid variables.$strong-cyan     
+            
+.review
+    display: flex
+    flex-flow: column
+    gap: variables.$gap-review
+    justify-content: space-between
+    background-color: variables.$very-dark-cyan
+    padding: 1rem
+    border-radius: .5rem
+    @include mixins.desktop
+        padding: 2rem
+    button
+        background-color: variables.$strong-cyan
+        text-transform: uppercase
+        color: variables.$very-dark-cyan
+        border-radius: .3rem
+        border: none
+        font-weight: 700
+        font-size: 20px
+        padding: .5rem
+        cursor: pointer
+        &:hover
+            background-color: variables.$light-grayish-cyan
+            color: variables.$very-dark-cyan
+        @include mixins.desktop
+            min-width: 16rem
+.results
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    gap: variables.$gap-review
+.amount-person
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+.total-person
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+.text
+    display: flex
+    flex-flow: column
+    h1
+        color: variables.$white
+    h2
+        color: variables.$dark-grayish-cyan-2
+.money
+    display: flex
+    align-items: center
+    color: variables.$strong-cyan
+    font-size: 24px
+    font-weight: 700
+footer
+    display: none
